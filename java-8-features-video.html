@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <body>
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <title>Java 8 Features, Functional Interface in Java 8, Lambda Expression in Java 8, Method Reference in Java 8</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="description" content="Java 8 Features : Functional Interface in Java 8, Lambda Expression in Java 8, Method Reference in Java 8">
+            <meta name="keywords" content="java 8 features, functional interface in java 8, lambda expression in java 8, method reference in java 8, java 8 features with examples, default and static methods in functional interfaces, functional interface with lambda expression example, lambda expression example, lambda expression in java, lambda expression in java 8 example, method reference in java 8 with example">
+            <link rel="shortcut icon" href="logo">
+           
+            <meta name="robots" content="follow, index">
+            <link rel="canonical" href="https://www.worldliveacademy.com">
+            <meta property="og:site_name" content="World Live Academy, Java 8 Features : Functional Interface in Java 8, Lambda Expression in Java 8, Method Reference in Java 8.">
+            <meta property="og:title" content="World Live Academy, Java 8 Features : Functional Interface in Java 8, Lambda Expression in Java 8, Method Reference in Java 8.">
+            <meta property="og:url" content="https://www.worldliveacademy.com">
+            <meta property="og:type" content="tutorial">
+            <meta property="og:description" content="Java 8 Features : Functional Interface in Java 8, Lambda Expression in Java 8, Method Reference in Java 8.">
+            <meta property="og:image" content="homepage.jpg">
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Java 8 Features, Functional Interface in Java 8, Lambda Expression in Java 8, Method Reference in Java 8">
+            <meta name="twitter:description" content="Java 8 Features : Functional Interface in Java 8, Lambda Expression in Java 8, Method Reference in Java 8.">
+            <meta name="twitter:site" content="@https://www.worldliveacademy.com">
+            <meta name="twitter:image" content="https://www.worldliveacademy.com/images/og/homepage.jpg">
+   
+            <link rel="shortcut icon" href="images/logo.png">
+           
+            
+            <link rel="stylesheet" href="style.css" type="text/css"/>
+            <link href="css/custom-style.css" rel="stylesheet" type="text/css"/>
+            <script src="tab/tabcontent.js" type="text/javascript"></script>
+            <link href="tab/tabcontent.css" rel="stylesheet" type="text/css"/>
+            <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=58cbae844ae03600117e5efb&product=sticky-share-buttons"></script>
+            <script type="text/javascript" language="javascript">
+                function playControl(videoId) {
+                    document.getElementById("player").innerHTML = '<iframe class="video_frame" src="https://www.youtube.com/embed/' + videoId + '?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+                }
+            </script>
+        </head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-88YD3TCF9V"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+             gtag('config', 'G-88YD3TCF9V');
+        </script>
+
+        
+        <div class="workarea">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+            <script src="css/jquery-latest.min.js" type="text/javascript"></script>
+            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            
+            <div id="main_menu">
+                <nav class="navbar navbar-default ">
+                    <div class="navbar-header">
+                        
+                        <a hhref="https://www.worldliveacademy.com">
+                            <div>
+                                <img class="img-responsive logo-img" width="140" height="93" src="images/logo1.jpeg" alt="World Live Academy" title="World Live Academy">
+                            </div>
+                        </a>
+                    </div>
+                    <!--<div class="container" style="width:100%">
+                        
+                        
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <div id="cbcssmenu">
+                                <ul class="nav navbar-nav navbar-right" id="navigate">
+                                    <li>
+                                        <a href="characters">
+                                            <img src="menu/image/set4/character.png" class="	menu_img desktop_menu" alt="Characters" width="112" height="75" title="Characters">
+                                            <span class="mobile_menu">Characters</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="games">
+                                            <img src="menu/image/set4/games.png" class="	menu_img desktop_menu" alt="Games" width="112" height="75" title="Games">
+                                            <span class="mobile_menu">Games</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="videos">
+                                            <img src="menu/image/set4/videos.png" class=" menu_img desktop_menu" alt="Videos" width="112" height="75" title="Videos">
+                                            <span class="mobile_menu">Videos</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="downloads">
+                                            <img src="menu/image/set4/downloads.png" class="	menu_img desktop_menu" alt="Downloads" width="112" height="75" title="Downloads">
+                                            <span class="mobile_menu">Downloads</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="event">
+                                            <img src="menu/image/set4/events.png" class=" menu_img desktop_menu" alt="Events" width="115" height="75" title="Events">
+                                            <span class="mobile_menu">Events</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="menu/image/set4/store.png" class=" menu_img desktop_menu" width="112" height="75" alt="Store" title="Store">
+                                            <span class="mobile_menu">Store</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>-->
+                </nav>
+            </div>
+            <div class="page-title123" style="padding-top: 0px;margin-bottom: 8px;">
+                <!--<div class="content123" style="padding-bottom: 10px;"> 
+                    <a href="" target="_blank" id="bannerID" rel="noreferrer">
+                        <img src="" class="img-responsive  img-thumbnail" width="728" height="90" alt="" title="">
+                    </a>
+                </div>-->
+                <div class="page_container">
+                    <div class="page-title" style="text-align: left;">
+                        <span class="page-title-content">Java 8 Features, Lambda Expression, Functional Interface, Method Reference</span>
+                    </div>
+                    <div class="one_column">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div id="player">
+                                    <iframe type="text/html" class="video_frame" src="https://www.youtube.com/embed/a28Sv9hGGTo?showinfo=0&controls=0&modestbranding=1&disablekb=1&cc_load_policy=1&autoplay=1&loop=1&autohide=1&rel=0&enablejsapi=1&fs=0&mute=1" title="YouTube video player" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    frameborder="0" 
+                                    allow="autoplay"
+                                    mozallowfullscreen="mozallowfullscreen" 
+                                    msallowfullscreen="msallowfullscreen" 
+                                    oallowfullscreen="oallowfullscreen" 
+                                    webkitallowfullscreen="webkitallowfullscreen"
+                                    allowfullscreen="allowfullscreen"
+                                    allowfullscreen="true"
+                                    allowsInlineMediaPlayback="1"
+                                    controls="1"></iframe>
+                                </div>
+                                <!--Subscribe-->
+                                <div style="width:100%;">    
+                                    <!--<div style="float: left; padding-left: 5px;">
+                                        <div class="">
+                                            <form role="search" method="post" id="ss-form" class="span12" style="margin-top: -8px;">
+                                                <div>
+                                                    <div class="footer_control1">
+                                                        <input type="email" value="" name="ss_mail" id="ss_mail" placeholder="Enter Email ID" required>
+                                                    </div>
+                                                    <div class="footer_control2">
+                                                        <input type="submit" value="Subscribe Now">
+                                                    </div>
+                                                    <div class="clear"></div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>-->
+                                    <div style="padding-left: 5px;width:70%;height:50px;float:right;">  
+                                        <script src="https://apis.google.com/js/platform.js" gapi_processed="true"></script>
+                                        <div style="float: left; height: 25px;padding: 15px 0px 15px 40px;text-align: right;">
+                                            <span style="color: darkolivegreen;font-weight: bold;">Please Click and <span class="blink">Subscribe &rarr;</span></span>
+                                        </div>
+                                        <div id="___ytsubscribe_0" style="vertical-align: baseline; display: inline-block; height:49px; background: black;float: right;border: 1px solid brown;">
+                                            <iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px;margin:0px; border-style:none;border-style: none; left: 0px; visibility: visible;" tabindex="0" vspace="0" width="100%" id="I0_1680534832413" name="I0_1680534832413" src="https://www.youtube.com/subscribe_embed?usegapi=1&amp;channelid=UCmh0r5IOBhRHC6ttba20QMA&amp;layout=full&amp;theme=dark&amp;count=default&amp;origin=file%3A%2F%2F&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.zUi2Oiqh0cQ.O%2Fd%3D1%2Frs%3DAHpOoo-VnflFHGTzk3OsaVpWbqz0Ysb2Jw%2Fm%3D__features__#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conload&amp;id=I0_1680534832413&amp;_gfid=I0_1680534832413&amp;parent=file%3A%2F%2F&amp;pfname=&amp;rpctoken=25028332" data-gapiattached="true"></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <!--Sponsored-->
+                            <div class="col-md-3">
+                                <div class="header">
+                                    <h3 class="header-title">Java 8 Features</h3>
+                                    <!--<p class="header-title2">.-->
+                                        <div class="clear"></div><div class="clear"></div>
+                                        <div style="padding-left:10px;">
+                                            <span style="float:left;color: beige;"><b>&#x21d2;</b></span> 
+                                            <span>
+                                                <a onclick="playControl('a28Sv9hGGTo')" target="_blank" rel="noreferrer" style="color: beige;text-decoration:underline;">
+										            <h4>Functional Interface in Java 8 in Details with Example</h4>
+										        </a>
+                                            </span>
+                                        </div>
+                                        <div class="clear"></div><div class="clear"></div>
+                                        <div style="padding-left:10px;">
+                                            <span style="float:left;color: beige;"><b>&#x21d2;</b></span>
+                                            <span>
+                                                <a onclick="playControl('EjlHo4kdGrk')" target="_blank" rel="noreferrer" style="color: beige;text-decoration:underline;">
+                                                    <h4> Lambda Expression in Java 8 in Details with Example</h4></a>
+                                            </span>
+                                        </div>
+                                        <div class="clear"></div><div class="clear"></div>
+                                        <div style="padding-left:10px;">
+                                            <span style="float:left;color: beige;"><b>&#x21d2;</b></span>
+                                            <span>
+                                                <a onclick="playControl('EjlHo4kdGrk')" target="_blank" rel="noreferrer" style="color: beige;text-decoration:underline;">
+                                                    <h4> Method Reference in Java 8 in Details with Example</h4>
+                                                </a>
+                                            </span>
+                                        </div>
+                                        <div class="clear"></div><div class="clear"></div><div class="clear"></div>
+							
+                                </div>
+                                <div class="clear"></div>
+                                <div class="content"> 
+                                    <!--<a href="" target="_blank" rel="noreferrer">
+                                        <img src="" class="img-responsive  img-thumbnail" width="500" height="500" alt="Image" title="Image">
+                                    </a>-->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space"></div>
+                        <div class="row"><div class="col-md-8"></div></div>
+                        <div class="clear"></div>
+                        <div class="space"></div>
+                        <div class="row">
+                            <main>
+                                <section id="content1">
+                                    <div style="width:100%;">
+                                        <div class="section group">
+                                            <span class="cb-nKgqAZ7xOjs">
+                                                <div class="col span_1_of_4">
+                                                    <div class="imageWrapper" style="background-color:#F5F5F5;text-align: center ;">
+                                                        <img src="images/Functional Interface.PNG" alt="Functional Interface In Java 8" title="Functional Interface In Java 8 | Details with Example" style="width:100%; height:100%;" class="hover"/>
+                                                        <div style="min-height: 45px;width: auto;padding-top: 5px;padding-bottom:5px;">
+                                                            <span style="width:80%; color:blueviolet; font-weight: bold"><h1>Functional Interface In Java 8, Details with Example</h1></span>
+                                                        </div>
+                                                        <div class="textWrapper">
+                                                            <a style="color: #ff5b5b" onclick="playControl('a28Sv9hGGTo')">
+                                                                <div style="padding-top: 25%;padding-bottom: 35%;">
+                                                                    <i class="fa fa-play fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="cb-KUNxwAKXEUQ">
+                                                <div class="col span_1_of_4">
+                                                    <div class="imageWrapper" style="background-color:#F5F5F5;text-align: center ;">
+                                                        <img src="images/Lambda Expression.PNG" alt="Lambda Expression in Java 8" title="Lambda Expression in Java 8 | Details with Example" style="width:100%; height:100%;" class="hover"/>
+                                                        <div style="min-height: 45px;width: auto;padding-top: 5px;padding-bottom:5px;">
+                                                            <span style="width:80%; color:blueviolet; font-weight: bold"><h1>Lambda Expression in Java 8, Details with Example</h1></span>
+                                                        </div>
+                                                        <div class="textWrapper">
+                                                            <a style="color: #ff5b5b" onclick="playControl('MX0ZvPYW8NA')">
+                                                                <div style="padding-top: 25%;padding-bottom: 35%;">
+                                                                    <i class="fa fa-play fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="cb-ev0NVY8bZRs">
+                                                <div class="col span_1_of_4">
+                                                    <div class="imageWrapper" style="background-color:#F5F5F5;text-align: center ;">
+                                                        <img src="images/Method Reference.PNG" alt="Method Reference in Java 8" title="Method Reference in Java 8 | Details with Example" style="width:100%; height:100%;" class="hover"/>
+                                                        <div style="min-height: 45px;width: auto;padding-top: 5px;padding-bottom:5px;">
+                                                            <span style="width:80%; color:blueviolet; font-weight: bold"><h1>Method Reference in Java 8, Details with Example</h1></span>
+                                                        </div>
+                                                        <div class="textWrapper">
+                                                            <a style="color: #ff5b5b" onclick="playControl('EjlHo4kdGrk')">
+                                                                <div style="padding-top: 25%;padding-bottom: 35%;">
+                                                                    <i class="fa fa-play fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="cb-XUMWRCvDwzQ">
+                                                <div class="col span_1_of_4">
+                                                    <div class="imageWrapper" style="background-color:#F5F5F5;text-align: center ;">
+                                                        <img src="images/Lambda Expression.PNG" alt="Lambda Expression in Java 8" title="Lambda Expression in Java 8 | Details with Example" style="width:100%; height:100%;" class="hover"/>
+                                                        <div style="min-height: 45px;width: auto;padding-top: 5px;padding-bottom:5px;">
+                                                            <span style="width:80%; color:blueviolet; font-weight: bold"><h1>Lambda Expression in Java 8, Details with Example</h1></span>
+                                                        </div>
+                                                        <div class="textWrapper">
+                                                            <a style="color: #ff5b5b" onclick="playControl('MX0ZvPYW8NA')">
+                                                                <div style="padding-top: 25%;padding-bottom: 35%;">
+                                                                    <i class="fa fa-play fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <!--  <span class="cb-LNy4oZOfZMI">
+                                                <div class="col span_1_of_4">
+                                                    <div class="imageWrapper" style="background-color:#F5F5F5;text-align: center ;">
+                                                        <img src="images/Method Reference.PNG" alt="" title="Lambda Expression in Java 8 | Details with Example" style="width:100%; height:100%;" class="hover"/>
+                                                        <div style="min-height: 45px;width: auto;padding-top: 5px;padding-bottom:5px;">
+                                                            <span style="width:80%; color:#ff5b5b; font-weight: bold"><h1>Lambda Expression in Java 8 | Details with Example</h1></span>
+                                                        </div>
+                                                        <div class="textWrapper">
+                                                            <a style="color: #ff5b5b" onclick="playControl('LNy4oZOfZMI')">
+                                                                <div style="padding-top: 25%;padding-bottom: 35%;">
+                                                                    <i class="fa fa-play fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                          <span class="cb-csq9BxROyG0">
+                                                <div class="col span_1_of_4">
+                                                    <div class="imageWrapper" style="background-color:#F5F5F5;text-align: center ;">
+                                                        <img src="images/Lambda Expression.PNG" alt="" title="" style="width:100%; height:100%;" class="hover"/>
+                                                        <div style="min-height: 45px;width: auto;padding-top: 5px;padding-bottom:5px;">
+                                                            <span style="width:80%; color:#ff5b5b; font-weight: bold">Java 8</span>
+                                                        </div>
+                                                        <div class="textWrapper">
+                                                            <a style="color: #ff5b5b" onclick="playControl('csq9BxROyG0')">
+                                                                <div style="padding-top: 25%;padding-bottom: 35%;">
+                                                                    <i class="fa fa-play fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="cb-AZa0MwFLCEs">
+                                                <div class="col span_1_of_4">
+                                                    <div class="imageWrapper" style="background-color:#F5F5F5;text-align: center ;">
+                                                        <img src="images/Method Reference.PNG" alt="" title="CJava 8" style="width:100%; height:100%;" class="hover"/>
+                                                        <div style="min-height: 45px;width: auto;padding-top: 5px;padding-bottom:5px;">
+                                                            <span style="width:80%; color:#ff5b5b; font-weight: bold">Java 8</span>
+                                                        </div>
+                                                        <div class="textWrapper">
+                                                            <a style="color: #ff5b5b" onclick="playControl('AZa0MwFLCEs')">
+                                                                <div style="padding-top: 25%;padding-bottom: 35%;">
+                                                                    <i class="fa fa-play fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            <span class="cb-D-6cXKQgp1E">
+                                                <div class="col span_1_of_4">
+                                                    <div class="imageWrapper" style="background-color:#F5F5F5;text-align: center ;">
+                                                        <img src="images/Functional Interface.PNG" alt="" title="Java 8" style="width:100%; height:100%;" class="hover"/>
+                                                        <div style="min-height: 45px;width: auto;padding-top: 5px;padding-bottom:5px;">
+                                                            <span style="width:80%; color:#ff5b5b; font-weight: bold">Java 8</span>
+                                                        </div>
+                                                        <div class="textWrapper">
+                                                            <a style="color: #ff5b5b" onclick="playControl('D-6cXKQgp1E')">
+                                                                <div style="padding-top: 25%;padding-bottom: 35%;">
+                                                                    <i class="fa fa-play fa-5x" aria-hidden="true"></i>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>-->
+                                        
+                                        </div>
+                                    </div>
+                                </section>
+                            </main>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="space"></div>
+                </div>
+                <div class="footer_row">
+                    <div style="background-color: rgb(90, 17, 3); color: rgb(255, 255, 255);">
+                        <div class="footer-container">
+                            <div class="footer_col1 web_footer">
+                                <p>
+                                    <a href="https://www.worldliveacademy.com" target="new" style="color:white">Website Policy</a>
+                                    <span class="webFooter"></span>
+                                    <a href="https://www.worldliveacademy.com" target="new" style="color:white">Copyright</a>
+                                    <span class="webFooter"></span>
+                                </p>
+                            </div>
+                            <div class="footer_col1 mob_footer">
+                                <p>
+                                    <a href="https://www.worldliveacademy.com" target="new" style="color:white">Website Policy</a>
+                                    <span class="webFooter"></span>
+                                    <a href="https://www.worldliveacademy.com" target="new" style="color:white">Copyright</a>
+                                    <span class="webFooter"></span>
+                                </p>
+                            </div>
+                            <div class="clear"></div>
+                            <hr>
+                            <div class="copyRight">
+                                <p>&copy;Copyright 2023  <a href="https://www.worldliveacademy.com" target="new" style="color:white;margin:0px 10px 0px 10px;">www.worldliveacademy.com</a>. All Rights Reserved.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <script>
+            $('img').hover(function() {
+                $(this).data('title', $(this).attr('title')).removeAttr('title');
+            }, function() {
+                $(this).attr('title', $(this).data('title'));
+            });
+        </script>
+    </body>
+</html>
