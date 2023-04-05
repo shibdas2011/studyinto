@@ -274,7 +274,9 @@ input:checked + label {
 }
 
 .logo-img {
-    width: 92%;
+    width: 50%;
+    float: left;
+    margin: 0px;
 }
 
 .menu_img {
