@@ -56,7 +56,7 @@ body {
 .header {
     background-color: #320903;
     font-weight: 700;
-    text-transform: uppercase
+    /*text-transform: uppercase*/
 }
 
 .header-title {
